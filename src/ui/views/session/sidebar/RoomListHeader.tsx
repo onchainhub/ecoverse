@@ -25,7 +25,7 @@ export function RoomListHeader() {
                 content={
                   <>
                     <DropdownMenuItem onSelect={() => selectWindow(OverlayWindow.CreateWorld)}>
-                      Create World
+                      Create Eco World
                     </DropdownMenuItem>
                     <DropdownMenuItem onSelect={openDialog}>Join with Alias</DropdownMenuItem>
                   </>
