@@ -38,7 +38,7 @@ export function LoginView() {
         <div className="flex items-center gap-sm">
           <Icon src={PlanetIC} size="lg" />
           <Text variant="h2" weight="bold">
-            Third Room
+            Ecoverse
           </Text>
         </div>
         <form className="LoginView__form flex flex-column gap-md" onSubmit={handleLogin}>
