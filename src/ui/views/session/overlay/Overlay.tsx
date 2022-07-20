@@ -127,7 +127,7 @@ export function Overlay({
   return (
     <div className={classNames("Overlay", { "Overlay--no-bg": !isEnteredWorld }, "flex items-end")}>
       {worldPreviewUrl && previewingWorld && (
-        <img alt="World Preview" src={worldPreviewUrl} className="Overlay__world-preview" />
+        <img alt="ImpactState Preview" src={worldPreviewUrl} className="Overlay__world-preview" />
       )}
       <SidebarView
         spaces={<SpacesView />}
@@ -150,7 +150,7 @@ export function Overlay({
                         <Avatar
                           shape="circle"
                           size="lg"
-                          name={world.name || "Unnamed World"}
+                          name={world.name || "Unnamed Eco World"}
                           bgColor={`var(--usercolor${getIdentifierColorNumber(world.id)})`}
                           imageSrc={getAvatarHttpUrl(world.avatarUrl || "", 70, platform, world.mediaRepository)}
                         />
@@ -159,7 +159,7 @@ export function Overlay({
                     content={
                       <>
                         <NowPlayingStatus status="connected">Connected</NowPlayingStatus>
-                        <NowPlayingTitle>{world.name || "Unnamed World"}</NowPlayingTitle>
+                        <NowPlayingTitle>{world.name || "Unnamed Eco World"}</NowPlayingTitle>
                       </>
                     }
                     leftControls={
@@ -170,7 +170,7 @@ export function Overlay({
                           iconSrc={callMute ? MicOffIC : MicIC}
                           onClick={toggleMute}
                         />
-                        <IconButton variant="danger" label="Left world" iconSrc={LogoutIC} onClick={onExitWorld} />
+                        <IconButton variant="danger" label="Left Eco World" iconSrc={LogoutIC} onClick={onExitWorld} />
                       </>
                     }
                   />

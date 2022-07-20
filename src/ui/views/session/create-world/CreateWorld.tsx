@@ -173,7 +173,7 @@ export function CreateWorld() {
           <Header
             left={
               <HeaderTitle icon={<Icon className="shrink-0" src={LanguageIC} color="surface" />}>
-                Create World
+                Create Eco World
               </HeaderTitle>
             }
             right={<IconButton onClick={() => closeWindow()} iconSrc={CrossIC} label="Close" />}
@@ -186,7 +186,7 @@ export function CreateWorld() {
               children={
                 <Scroll>
                   <div className="CreateWorld__content">
-                    <SettingTile label={<Label>World Avatar</Label>}>
+                    <SettingTile label={<Label>HelpNetwork Avatar</Label>}>
                       <AvatarPicker url={avatarData.url} onAvatarPick={pickAvatar} onAvatarDrop={dropAvatar} />
                     </SettingTile>
                     <div className="flex gap-lg">
@@ -216,10 +216,10 @@ export function CreateWorld() {
                       </SettingTile>
                     </div>
                     <div className="flex gap-lg">
-                      <SettingTile className="grow basis-0" label={<Label>World Name *</Label>}>
+                      <SettingTile className="grow basis-0" label={<Label>Eco World Name *</Label>}>
                         <Input name="nameInput" required />
                       </SettingTile>
-                      <SettingTile className="grow basis-0" label={<Label>Topic</Label>}>
+                      <SettingTile className="grow basis-0" label={<Label>Mission</Label>}>
                         <Input name="topicInput" />
                       </SettingTile>
                     </div>
@@ -265,7 +265,7 @@ export function CreateWorld() {
                       type="submit"
                       disabled={isAliasAvail === false || !sceneInfo.mxc || !previewInfo.mxc || creatingRoom}
                     >
-                      {creatingRoom ? "Creating World..." : "Create World"}
+                      {creatingRoom ? "Creating Eco World..." : "Create Eco World"}
                     </Button>
                   }
                 />

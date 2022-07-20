@@ -97,17 +97,17 @@ export function WorldPreview({ onJoinWorld, onLoadWorld, onReloadWorld, onEnterW
             return (
               <WorldPreviewCard
                 title="Loading Failed"
-                desc={roomStatusError ? `Error loading world: ${roomStatusError}` : "Unknown error occured"}
+                desc={roomStatusError ? `Error loading Eco World: ${roomStatusError}` : "Unknown error occured"}
               />
             );
           }
         } else if (roomStatus & RoomStatus.Replaced) {
           return null;
         } else if (roomStatus & RoomStatus.BeingCreated) {
-          return <WorldPreviewCard title="Creating Room..." />;
+          return <WorldPreviewCard title="Creating Eco World..." />;
         } else if (roomStatus & RoomStatus.Invited) {
           if (!previewWorldId) {
-            return <WorldPreviewCard title="Loading Room..." />;
+            return <WorldPreviewCard title="Loading Eco World..." />;
           }
 
           return <InviteWorldPreview session={session} roomId={previewWorldId} />;
@@ -124,7 +124,7 @@ export function WorldPreview({ onJoinWorld, onLoadWorld, onReloadWorld, onEnterW
                 memberCount={memberCount}
                 options={
                   <Button size="lg" variant="secondary" onClick={onLoadWorld}>
-                    Load World
+                    Load Eco World
                   </Button>
                 }
               />
@@ -163,7 +163,7 @@ export function WorldPreview({ onJoinWorld, onLoadWorld, onReloadWorld, onEnterW
                   memberCount={memberCount}
                   options={
                     <Button size="lg" variant="primary" onClick={onEnterWorld}>
-                      Enter World
+                      Enter Eco World
                     </Button>
                   }
                 />
@@ -176,7 +176,7 @@ export function WorldPreview({ onJoinWorld, onLoadWorld, onReloadWorld, onEnterW
                   desc={error ? error.message : "Unknown error"}
                   options={
                     <Button size="lg" variant="secondary" onClick={onReloadWorld}>
-                      Reload World
+                      Reload Eco World
                     </Button>
                   }
                 />
@@ -216,7 +216,7 @@ export function WorldPreview({ onJoinWorld, onLoadWorld, onReloadWorld, onEnterW
               title="Unnamed Room"
               options={
                 <Button size="lg" variant="primary" disabled={joiningWorld} onClick={onJoinWorld}>
-                  {joiningWorld ? "Joining World..." : "Join World"}
+                  {joiningWorld ? "Joining Eco World..." : "Join Eco World"}
                 </Button>
               }
             />

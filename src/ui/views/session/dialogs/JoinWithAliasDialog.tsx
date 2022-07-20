@@ -59,7 +59,7 @@ export function JoinWithAliasDialog({ renderTrigger }: JoinWithAliasDialogProps)
       await session.joinRoom(aliasOrId);
       closeDialog();
     } catch (err) {
-      setError(`Failed to join "${aliasOrId}". Either world/room is private or doesn't exist.`);
+      setError(`Failed to join "${aliasOrId}". Either state is private or doesn't exist.`);
     }
     setJoining(false);
   };
